@@ -127,8 +127,6 @@
 			<div class="row">
 				<span id="instructions"> INSTRUCTIONS: </span>
 				<center>
-					<br>
-					<br><br>
 					<div id="main">
 						
 						<div class="six columns">
@@ -275,13 +273,13 @@
 		function step(){
 
 			if (time == 1000) 
-				intervals.push(setInterval(makeThing, 1000))
+				intervals.push(setInterval(makeThing, 800))
 				
 			if (time == 3000) 
-				intervals.push(setInterval(makeThing, 5000))
+				intervals.push(setInterval(makeThing, 3000))
 			
 			if (time == 6000) 
-				intervals.push(setInterval(makeThing, 10000))
+				intervals.push(setInterval(makeThing, 5000))
 			
 			scorediv.innerHTML = "score: " + score
 			
@@ -322,7 +320,7 @@
 			bottom.style.display = "block";
 			
 			msg = document.getElementById("scored")
-			msg.innerHTML = "<center> You scored " + (score - 1) + "!!! Thats " + (score - 1) + "x better than the Dallas school system!!</center>"
+			msg.innerHTML = "<center> You scored " + (score - 1) + "!!! Thats " + (score - 1) + "x better than the Dallas school system!!11</center>"
 			
 			/*facebook = document.getElementById("facebook");
 			facebook.href = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=" 
