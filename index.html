@@ -129,12 +129,38 @@
 				<center>
 					<br>
 					<br><br>
-					<div id="main" class="twelve columns">
-
+					<div id="main">
+						
+						<div class="six columns">
 							<img id="clock" class="clock" src="clock.png">
+						</div>
+						
+						<div class="six columns">
 							<img id="bomb" style="width:300px;height:300px;visibility:hidden">
+						</div>
+							
 					</div>
 				</center>
+			</div>
+			
+			<div class="row">
+				<div class="two columns">
+					&emsp;
+				</div>
+				
+				<div class="four columns">
+					<div id="first"></div>
+					<div id="second"></div>
+				</div>
+				
+				<div class="four columns">
+					<div id="third" style="float:right"></div>
+				</div>
+
+				<div class="two columns">
+					&emsp;
+				</div>
+			
 			</div>
 			
 			<div id ="bottom" style="display:none"> 
@@ -174,9 +200,8 @@
 				</div>
 				
 				<div class="row">
-					<div class="five columns">
-						<img src="http://i.imgur.com/IJpYgvb.jpg" style="height:400px">
-						</img>
+					<div id="thing" class="five columns">
+						
 					</div>
 					
 					<div class="seven columns" style="font-family:sans-serif">
@@ -186,7 +211,7 @@
 							and suspended from school because a teacher thought his DIY digital clock was a bomb. 
 							<a href="http://www.dallasnews.com/news/community-news/northwest-dallas-county/headlines/20150915-irving-ninth-grader-arrested-after-taking-homemade-clock-to-school.ece"> Source</a>
 							<br> <br>
-							"He’s vowed never to take an invention to school again."
+							"He&#8217;s vowed never to take an invention to school again."
 							
 							<br> <br>
 							
@@ -306,6 +331,13 @@
 			
 			twitter = document.getElementById("twitter");*/
 			
+			document.createElement("img")
+			img.src = "http://i.imgur.com/IJpYgvb.jpg"
+			img.style.cssText = "";
+			img.style.height = 400
+			document.getElementById("thing").appendChild(img)
+			
+			
 		}
 		
 		function makeThing(){
@@ -350,15 +382,19 @@
 				   clock = document.getElementById('clock');
 				   clock.style.visibility = "visible";
 
+					
 				   clock = clock.getBoundingClientRect();
-
+					/*
 				   div = document.createElement("div");
 				   div.style.position = "absolute";
 				   div.style.bottom = clock.bottom - 250;
 				   div.style.left = clock.left + 50;
 				   div.innerHTML = "This is a clock. (A cool one, in fact)";
 				   document.body.appendChild(div);
-
+				   */
+					
+					first = document.getElementById('first')
+					first.innerHTML = "This is a clock. (A cool one, in fact)"
 				   press = document.getElementById('press');
 				   press.innerHTML = "again ->"
 
@@ -374,12 +410,17 @@
 					img.style.left = clock.left - 100;
 					document.body.appendChild(img);
 					
+					/*
 					evendiv = document.createElement("div");
 					evendiv.style.position = "absolute";
 					evendiv.style.bottom = clock.bottom - 300;
 					evendiv.style.left = clock.left + 50;
 					evendiv.innerHTML = "...even if the person who made it <br> happens to be named Ahmed.";
 					document.body.appendChild(evendiv);
+					*/
+					
+					second = document.getElementById('first')
+					second.innerHTML = "...even if the person who made it <br> happens to be named Ahmed.";
 					
 					press.innerHTML = "one last time... ->"
 					
@@ -390,7 +431,7 @@
 				
 				else if (progress == 2){
 					document.body.removeChild(img);
-					evendiv.innerHTML = "";
+					second.innerHTML = "clock";
 
 					bomb = document.getElementById('bomb');
 					bomb.style.animationDuration = "5s";
@@ -400,12 +441,15 @@
 					
 					bomb = bomb.getBoundingClientRect();
 
-					bombdiv = document.createElement("div");
+					/*bombdiv = document.createElement("div");
 					bombdiv.style.position = "absolute";
 					bombdiv.style.bottom = bomb.bottom - 250;
 					bombdiv.style.left = bomb.left + 50;
 					bombdiv.innerHTML = "and this is a bomb.";
 					document.body.appendChild(bombdiv);
+					*/
+					third = document.getElementById("third")
+					third.innerHTML = "and this is a bomb.";
 
 					press.innerHTML = "i lied ->";
 					
@@ -415,8 +459,9 @@
 				else if (progress == 3){
 					
 					main = document.getElementById("main")
-					bombdiv.innerHTML = "";
-					div.innerHTML = "";
+					second.innerHTML = "";
+					third.innerHTML = "";
+					//div.innerHTML = "";
 					press.innerHTML = "start"
 					main.innerHTML = "click on the BOMBS (before they blow up), not the CLOCKS.";
 					
