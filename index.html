@@ -87,6 +87,15 @@
 				user-select: none;
 			}
 			
+			.serious{
+				font-family: serif;
+			}
+			
+			hr{
+				border-color: black;
+			}
+		}
+			
 		</style>
 	</header>
 	
@@ -104,7 +113,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="three columns">&emsp;</div>
-				<div id="title" class="six columns"> Clock or Bomb?? </div>
+				<div id="title" class="six columns"> <a href='http://www.clockorbomb.xyz' style="text-decoration:none;color:black" > Clock or Bomb??</a>  </div>
 				<div class="three columns" style="margin-top:30px"> <span id="score">score: zero :( </span></div>			
 			</div>
 			
@@ -158,12 +167,43 @@
 				
 				<div class="five columns">&emsp;</div>
 				
-			
+				<hr>
+				
+				<div class="serious">
+					<h1>On a more serious note...</h1>
+				</div>
+				
+				<div class="row">
+					<div class="five columns">
+						<img src="http://i.imgur.com/IJpYgvb.jpg" style="height:400px">
+						</img>
+					</div>
+					
+					<div class="seven columns" style="font-family:sans-serif">
+						<p>
+							I wish this website were just a joke, but it's not. As you may have heard, a 
+							14 year-old boy was arrested, taken to the police station in handcuffs,
+							and suspended from school because a teacher thought his DIY digital clock was a bomb. 
+							<a href="http://www.dallasnews.com/news/community-news/northwest-dallas-county/headlines/20150915-irving-ninth-grader-arrested-after-taking-homemade-clock-to-school.ece"> Source</a>
+							<br> <br>
+							"He’s vowed never to take an invention to school again."
+							
+							<br> <br>
+							
+							Not only does this speak to racism and racial profiling still present in America today,
+							but the fact that they killed the innovative spirit of a young inventor is heartbreaking.
+							
+							<br>
+							<br>
+						</p>
+
+						
+					</div>		
+					
+				</div>
 			</div>
 				
-			
-			</div>
-			
+						
 			
 			<br>
 			<br>
@@ -257,7 +297,7 @@
 			bottom.style.display = "block";
 			
 			msg = document.getElementById("scored")
-			msg.innerHTML = "<center> You scored " + score + "!!! Thats " + score + "x better than the Dallas school system!!</center>"
+			msg.innerHTML = "<center> You scored " + (score - 1) + "!!! Thats " + (score - 1) + "x better than the Dallas school system!!</center>"
 			
 			/*facebook = document.getElementById("facebook");
 			facebook.href = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=" 
