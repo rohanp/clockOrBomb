@@ -53,20 +53,18 @@
 				}
 			}
 			
-			@-webkit-keyframes biggif{
+			@keyframes gif{
 				0% {content: url(bomb/bomb1.png);}
 				20% {content: url(bomb/bomb2.png);}
 				40% {content: url(bomb/bomb3.png);}
 				60% {content: url(bomb/bomb4.png);}
 				80% {content: url(bomb/bomb5.png);}
-				100% {
-					content: url(bomb/bomb6.png);
+				100% {content: url(bomb/bomb6.png);
 				}
 			}
 			
-			
 			.bigbomb{
-				animation-name: biggif;
+				animation-name: gif;
 				animation-duration: 5s;
 				animation-fill-mode:forwards
 			}
@@ -127,6 +125,8 @@
 			<div class="row">
 				<span id="instructions"> INSTRUCTIONS: </span>
 				<center>
+					<br>
+					<br><br>
 					<div id="main">
 						
 						<div class="six columns">
@@ -253,7 +253,6 @@
 				  <div id="footer">Made with &lt3 by <a href="http://rohanp.xyz">Rohan</a> </div>
 				</td>
 			</tr>
-			
 		</table>
 
 	</body>
@@ -272,14 +271,14 @@
 		
 		function step(){
 
-			if (time == 1000) 
-				intervals.push(setInterval(makeThing, 800))
+			if (time == 500) 
+				intervals.push(setInterval(makeThing, 1100))
 				
 			if (time == 3000) 
-				intervals.push(setInterval(makeThing, 3000))
+				intervals.push(setInterval(makeThing, 5000))
 			
 			if (time == 6000) 
-				intervals.push(setInterval(makeThing, 5000))
+				intervals.push(setInterval(makeThing, 10000))
 			
 			scorediv.innerHTML = "score: " + score
 			
@@ -297,7 +296,7 @@
 			
 			makeThing()
 			makeThing()
-			intervals.push(setInterval(makeThing, 500))
+			intervals.push(setInterval(makeThing, 400))
 			stepInterval = setInterval(step, 10)
 				
 		}
@@ -320,7 +319,7 @@
 			bottom.style.display = "block";
 			
 			msg = document.getElementById("scored")
-			msg.innerHTML = "<center> You scored " + (score - 1) + "!!! Thats " + (score - 1) + "x better than the Dallas school system!!11</center>"
+			msg.innerHTML = "<center> You scored " + (score - 1) + "!!! Thats " + (score - 1) + "x better than the Dallas school system!!</center>"
 			
 			/*facebook = document.getElementById("facebook");
 			facebook.href = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=" 
